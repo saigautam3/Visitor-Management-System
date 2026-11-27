@@ -134,6 +134,8 @@
 
         .btn {
             display: inline-flex;
+            align-items: center;
+            justify-content: center;
             padding: 12px 18px;
             border: 1px solid var(--accent);
             color: var(--accent);
@@ -298,7 +300,6 @@
             border-radius: 6px
         }
 
-
         .preview-gallery {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -461,7 +462,8 @@
 
 <body>
     <header>
-        <div class="wrap nav"><a class="brand" href="#">VMS<span>.</span></a>
+        <div class="wrap nav">
+            <a class="brand" href="#">VMS<span>.</span></a>
             <nav class="nav-links" aria-label="Main navigation">
                 <a href="#challenge">Challenge</a>
                 <a href="#application-modules">Application Modules</a>
@@ -472,6 +474,7 @@
             </nav>
         </div>
     </header>
+
     <main>
         <section class="hero" id="overview">
             <div class="wrap">
@@ -479,8 +482,21 @@
                 <h1>Visitor Management<br>System.</h1>
                 <p>A centralized visitor management solution built on ServiceNow to simplify visitor registration,
                     streamline host approvals, and manage on-site check-in and check-out operations.</p>
+
+                <!-- LIVE SERVICENOW PROJECT PREVIEW -->
+                <div class="actions">
+                    <a class="btn primary"
+                        href="https://dev397828.service-now.com/$sp.do?id=sp-preview&amp;sys_id=8ffeac6583c813547a759defeeaad353"
+                        target="_blank" rel="noopener noreferrer">
+                        OPEN LIVE PROJECT ↗
+                    </a>
+                    <a class="btn" href="#interface-preview">
+                        VIEW INTERFACE PREVIEW ↓
+                    </a>
+                </div>
             </div>
         </section>
+
         <section id="challenge">
             <div class="wrap problem">
                 <div>
@@ -497,6 +513,7 @@
                 </div>
             </div>
         </section>
+
         <section id="application-modules">
             <div class="wrap">
                 <div class="section-head">
@@ -529,6 +546,7 @@
                 </div>
             </div>
         </section>
+
         <section id="key-capabilities">
             <div class="wrap">
                 <div class="section-head">
@@ -549,6 +567,7 @@
                 </div>
             </div>
         </section>
+
         <section id="process-flow">
             <div class="wrap">
                 <div class="section-head">
@@ -575,6 +594,7 @@
                 </div>
             </div>
         </section>
+
         <section id="technology">
             <div class="wrap">
                 <div class="section-head">
@@ -586,14 +606,21 @@
                         server-side scripting, and workflow automation.</p>
                 </div>
                 <div class="stack">
-                    <span class="tag">ServiceNow Platform</span><span class="tag">Service Portal</span><span
-                        class="tag">HTML</span><span class="tag">CSS</span><span class="tag">AngularJS</span><span
-                        class="tag">JavaScript</span><span class="tag">GlideRecord</span><span
-                        class="tag">GlideAggregate</span><span class="tag">Flow Designer</span><span
-                        class="tag">Business Rules</span><span class="tag">sys_user</span>
+                    <span class="tag">ServiceNow Platform</span>
+                    <span class="tag">Service Portal</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">AngularJS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">GlideRecord</span>
+                    <span class="tag">GlideAggregate</span>
+                    <span class="tag">Flow Designer</span>
+                    <span class="tag">Business Rules</span>
+                    <span class="tag">sys_user</span>
                 </div>
             </div>
         </section>
+
         <section id="interface-preview">
             <div class="wrap">
                 <div class="section-head">
@@ -602,6 +629,7 @@
                         <h2>Application walkthrough.</h2>
                     </div>
                 </div>
+
                 <div class="preview-gallery">
                     <article class="preview-card">
                         <img src="assets/dashboard.png"
@@ -645,10 +673,16 @@
             </div>
         </section>
     </main>
+
     <footer>
-        <div class="wrap foot"><span>© <span id="year"></span> Visitor Management System</span></div>
+        <div class="wrap foot">
+            <span>© <span id="year"></span> Visitor Management System</span>
+        </div>
     </footer>
-    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
