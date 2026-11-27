@@ -298,6 +298,80 @@
             border-radius: 6px
         }
 
+
+        .preview-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .preview-card {
+            overflow: hidden;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(24, 50, 71, .06);
+        }
+
+        .preview-card img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 10;
+            object-fit: contain;
+            background: #edf2f6;
+        }
+
+        .preview-caption {
+            padding: 15px 18px 17px;
+        }
+
+        .preview-caption strong {
+            display: block;
+            color: var(--text);
+            font-size: 15px;
+            margin-bottom: 3px;
+        }
+
+        .preview-caption span {
+            display: block;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .walkthrough {
+            margin-top: 28px;
+            padding: 22px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(24, 50, 71, .06);
+        }
+
+        .walkthrough h3 {
+            margin: 0 0 5px;
+        }
+
+        .walkthrough p {
+            margin: 0 0 16px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .walkthrough video {
+            display: block;
+            width: 100%;
+            max-height: 620px;
+            background: #101820;
+            border-radius: 8px;
+        }
+
+        @media(max-width:800px) {
+            .preview-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .gallery-note {
             background: var(--panel);
             border: 1px dashed rgba(8, 127, 140, .45);
@@ -528,10 +602,45 @@
                         <h2>Application walkthrough.</h2>
                     </div>
                 </div>
-                <div class="gallery-note"><strong>Project screenshots and walkthrough video</strong>Add screenshots of
-                    the Dashboard, Visitor Registration, Receptionist interface, and approval flow to the repository's
-                    <code>assets/</code> folder. This section can then be updated to display the actual implementation
-                    images.
+                <div class="preview-gallery">
+                    <article class="preview-card">
+                        <img src="assets/dashboard.png"
+                            alt="Visitor Management System dashboard showing visitor statistics and recent visitor requests"
+                            loading="lazy">
+                        <div class="preview-caption">
+                            <strong>Dashboard &amp; Reports</strong>
+                            <span>Live visitor statistics, request status summaries, and recent visitor records.</span>
+                        </div>
+                    </article>
+
+                    <article class="preview-card">
+                        <img src="assets/visitor-registration.png"
+                            alt="Visitor Management System visitor registration form" loading="lazy">
+                        <div class="preview-caption">
+                            <strong>Visitor Registration</strong>
+                            <span>Capture visitor details, select the host employee, and submit the visit for
+                                approval.</span>
+                        </div>
+                    </article>
+
+                    <article class="preview-card">
+                        <img src="assets/receptionist-console.png"
+                            alt="Visitor Management System receptionist console with visitor records" loading="lazy">
+                        <div class="preview-caption">
+                            <strong>Receptionist Console</strong>
+                            <span>Review visitor records and manage check-in and check-out from the portal.</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="walkthrough">
+                    <h3>Complete Application Walkthrough</h3>
+                    <p>Watch the implementation walkthrough, covering the Visitor Management System interface and its
+                        main modules.</p>
+                    <video controls playsinline preload="metadata" poster="assets/dashboard.png">
+                        <source src="assets/visitor-management-walkthrough.mp4" type="video/mp4">
+                        Your browser does not support the video tag. Please use a modern browser to play this video.
+                    </video>
                 </div>
             </div>
         </section>
