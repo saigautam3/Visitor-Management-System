@@ -123,4 +123,4 @@ To explore the implementation, access to the configured ServiceNow instance and 
 ## Author
 
 **Sai Gautam**  
-ServiceNow CSA & CAD Certified | AI/ML | Full Stack Development
+
